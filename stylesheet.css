@@ -1,0 +1,81 @@
+body {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-family: Garamond;
+  background-image: url("https://img.freepik.com/free-photo/white-simple-textured-design-background_53876-102423.jpg?t=st=1650476317~exp=1650476917~hmac=9e0d3160fa7154f750e82432de489988aca817263e00424e14d2b252703441b8&w=740");
+}
+
+#pm-name{
+  color: navy;
+  font-style: bold;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+#flex-container {
+  display: flex;
+}
+
+#research{
+  margin-left: 10%;
+  border: 3px double;
+  background-color : #AAAA12;
+
+}
+
+#flex-container2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#personal-data{
+  width: 20%;
+  text-align: center;
+}
+
+#didattica{
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+#attivita-didattica{
+  border: 0.1px dashed;
+  background-color : orange;
+
+}
+
+#tesi-tirocini{
+  margin-top: 10%;
+  border: 0.1px dashed;
+  background-color : lightgray;
+}
+
+a {
+  color: green;
+}
+
+a:link {
+
+}
+
+a:visited {
+  color : purple;
+}
+
+a:focus {
+
+}
+
+a:hover {
+  border-bottom: 1px solid;
+background: #CDFEFA;
+}
+
+a:active {
+
+}
