@@ -2,102 +2,85 @@ body {
   width: 80%;
   margin: 0 auto;
   font-size: 1.2rem;
-  font-family: Palatino;
-  background: rgb(50 50 59);
-  list-style-type: square;
+  font-family: Avenir;
+  background: rgb(210 220 220);
 }
 
 #pm-name{
-  color: rgb(221 221 221);
+  color: darkred;
   font-style: bold;
   text-align: center;
 }
 
-img {
-  width: 100%;
-  border-radius: 40%;
-  border: antiquewhite 3px solid;
+#container{
+  display: flex;
+  justify-content: center;
 }
 
-#flex-container {
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 10000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+
+img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+#container2{
   display: flex;
+  margin-top: 20%;
+  flex-direction: column;
 }
 
 #research{
-  margin-right: 10%;
-  border: 3px double;
-  background-color : lightgrey;
-  border-radius : 10px;
-
+  border-bottom: 1px solid;
 }
 
-#flex-container2{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#personal-data{
-  width: 20%;
-  text-align: center;
-}
-
-#email{
-
-}
 #didattica{
-  margin-top: 10%;
-  text-align: center;
-  border : 0.1px dotted grey;
-  border-radius : 10px;
-  color: antiquewhite;
-
-}
-
-.didattica{
-  margin: 3px;
-  text-align: left;
-  border : 1px solid;
-  padding : 5px;
-  border-radius : 10px;
-
-}
-
-#flex-didattica{
-  display: flex;
-  justify-content: space-around;
-}
-
-#attivita-didattica{
-  margin : 10px;
-  margin-right : 5px;
-  width : 50%;
-}
-
-#tesi-tirocini{
-  margin : 10px;
-  margin-left : 5px;
-  width : 50%;
-
+  border-bottom: 1px solid;
 }
 
 #other-activities{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10%;
-  border: 1px dashed;
   margin-bottom: 10%;
-  border-radius : 10px;
-  border-color: lightgrey;
-}
-
-#otac{
-  color: lightgrey;
-}
-
-#footer{
-
 }
 
 a {
@@ -109,7 +92,7 @@ a:link {
 }
 
 a:visited {
-  color : purple;
+  color : darkgreen;
 }
 
 a:focus {
@@ -118,7 +101,6 @@ a:focus {
 
 a:hover {
   border-bottom: 1px solid;
-background: lightblue;
 }
 
 a:active {
